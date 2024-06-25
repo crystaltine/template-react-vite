@@ -1,0 +1,269 @@
+/* Prebuilt/general css stuff for the entire project */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General colors; for more specific component colors like menubar, footer bg, etc.,
+look in their respective CSS files. */
+:root {
+  --backgroundColor-1: 0, 0, 0;
+  --backgroundColor0: 4, 5, 6;
+  --backgroundColor1: 9, 10, 11;
+  --backgroundColor2: 16, 17, 18;
+  --backgroundColor3: 24, 26, 28;
+  --backgroundColor4: 33, 35, 37;
+  --backgroundColor5: 45, 47, 49;
+
+  --primaryColorUltraBright: 190, 232, 255;
+  --primaryColorBright: 48, 157, 246;
+  --primaryColorMedium: 51, 135, 224;
+  --primaryColorDark: 45, 113, 215;
+  --primaryColorDarker: 30, 98, 201;
+
+  --secondaryColorBright: 176, 177, 192;
+  --secondaryColorDark: 131, 135, 157;
+
+  --dangerColorBright: 236, 101, 101;
+  --dangerColorMedium: 188, 60, 60;
+  --dangerColorDark: 156, 51, 51;
+
+  --linkColor: rgb(191, 99, 244);
+
+  --genericPageWidth: min(90%, 1200px);
+  --pagePaddingY: min(120px, 10%);
+
+  --displayFont: "Satoshi", "Wix Madefor Display", Roboto, system-ui, sans-serif;
+  --paragraphFont: "Inter", "Work Sans", "Open Sans", system-ui, sans-serif;
+  --codeFont: "Roboto Mono", Consolas, monospace;
+
+  --roundedSmall: 5px;
+  --roundedMedium: min(2vmin, 8px);
+  --roundedLarge: 10px;
+}
+
+body {
+  font-family: var(--paragraphFont);
+  font-size: 16px;
+  margin: 0;
+  background-color: rgb(var(--backgroundColor1));
+  color: white;
+}
+
+/* root element defined in index.html */
+#root {
+  height: calc(100vh - var(--menuBarHeight));
+}
+
+/* reset default/standard styles for text elements */
+p {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--displayFont);
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 600;
+}
+h1 { 
+  font-size: 2.5em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+}
+h2 {
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+}
+h3 { 
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h4 { 
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+}
+h5 { 
+  font-size: .83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+}
+h6 { 
+  font-size: .67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid #fff2;
+  margin: 0;
+}
+
+code {
+  font-family: var(--codeFont);
+  font-size: 1em;
+  background-color: rgb(var(--backgroundColor2));
+  padding: 1px 3px;
+  border-radius: var(--roundedSmall);
+  color: #eefd;
+}
+
+a {
+  text-decoration: none;
+  color: var(--linkColor);
+  width: fit-content;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* class for quick debugging */
+.red {
+  background-color: rgba(255, 20, 20, 0.4) !important;
+  border: 5px solid white !important;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--linkColor);
+  width: fit-content;
+}
+.link:hover {
+  text-decoration: underline;
+}
+.link-invis {
+  text-decoration: none;
+  color: inherit;
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+}
+.link-invis:hover {
+  text-decoration: none !important;
+}
+.img-link-invis {
+  display: block;
+  font-size: 0;
+  text-decoration: none;
+  color: inherit;
+  width: fit-content;
+}
+
+.button-primary, .button-secondary, .button-danger {
+  border-radius: var(--roundedSmall);
+  font-weight: 600;
+  font-family: var(--displayFont);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.05s;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* All disabled button-primary */
+.button-primary[disabled] {
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.1s;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  opacity: 0.6;
+  box-shadow: none;
+  cursor: wait;
+  pointer-events: none;
+}
+.button-danger[disabled] {
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.1s;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: white;
+  opacity: 0.6;
+  box-shadow: none;
+  cursor: wait;
+  pointer-events: none;
+}
+.button-secondary[disabled] {
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.1s;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  outline: 1px solid #fff2;
+  color: white;
+  opacity: 0.6;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: wait;
+  pointer-events: none;
+}
+
+.button-danger {
+  color: white;
+  background-color: rgb(var(--dangerColorBright));
+  box-shadow: 0px 1px 2px 0px #00000030;
+}
+.button-danger:hover {
+  background-color: rgb(var(--dangerColorMedium));
+  box-shadow: -1px 2px 3px 1px #00000030;
+}
+
+.button-primary {
+  color: white;
+  background-color: rgb(var(--primaryColorDark));
+  box-shadow: 0px 1px 4px 1px #00000030;
+}
+.button-primary:hover {
+  background-color: rgb(var(--primaryColorMedium));
+  box-shadow: 0px 2px 5px 1px #00000040;
+}
+
+.button-secondary {
+  background-color: rgba(var(--backgroundColor3), 0.8);
+  color: white;
+  border: 1px solid #fff3;
+  outline: none;
+}
+.button-secondary:hover {
+  background-color: rgba(var(--backgroundColor5), 0.9);
+  border: 1px solid rgb(var(--secondaryColorBright));
+}
+
+.button-mopo {
+  margin: 0;
+  padding: 0;
+}
+.button-small {
+  padding: 5px 14px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+.button-medium {
+  padding: 8px 24px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+.button-large {
+  padding: 10px 28px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
