@@ -10,10 +10,10 @@ look in their respective CSS files. */
   --backgroundColor-1: 0, 0, 0;
   --backgroundColor0: 4, 5, 6;
   --backgroundColor1: 9, 10, 11;
-  --backgroundColor2: 16, 17, 18;
-  --backgroundColor3: 24, 26, 28;
-  --backgroundColor4: 33, 35, 37;
-  --backgroundColor5: 45, 47, 49;
+  --backgroundColor2: 16, 17, 19;
+  --backgroundColor3: 24, 26, 29;
+  --backgroundColor4: 33, 35, 39;
+  --backgroundColor5: 45, 47, 52;
 
   --primaryColorUltraBright: 190, 232, 255;
   --primaryColorBright: 48, 157, 246;
@@ -22,7 +22,7 @@ look in their respective CSS files. */
   --primaryColorDarker: 30, 98, 201;
 
   --secondaryColorBright: 176, 177, 192;
-  --secondaryColorDark: 131, 135, 157;
+  --secondaryColorDark: 131, 135, 145;
 
   --dangerColorBright: 236, 101, 101;
   --dangerColorMedium: 188, 60, 60;
@@ -33,7 +33,7 @@ look in their respective CSS files. */
   --genericPageWidth: min(90%, 1200px);
   --pagePaddingY: min(120px, 10%);
 
-  --displayFont: "Satoshi", "Wix Madefor Display", Roboto, system-ui, sans-serif;
+  --displayFont: "Wix Madefor Display", "Satoshi", "Red Hat Display", Roboto, system-ui, sans-serif;
   --paragraphFont: "Inter", "Work Sans", "Open Sans", system-ui, sans-serif;
   --codeFont: "Roboto Mono", Consolas, monospace;
 
@@ -122,6 +122,23 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+
+*::-webkit-scrollbar {
+  width: min(12px, 1vw);
+  height: min(12px, 1vh);
+}
+*::-webkit-scrollbar-track {
+  background: rgb(var(--backgroundColor3));
+}
+*::-webkit-scrollbar-thumb {
+  background: rgb(var(--backgroundColor5));
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--backgroundColor4));
+}
+*::-webkit-scrollbar-corner {
+  background: rgb(var(--backgroundColor3));
 }
 
 /* class for quick debugging */
@@ -245,10 +262,10 @@ a:hover {
 }
 .button-secondary:hover {
   background-color: rgba(var(--backgroundColor5), 0.9);
-  border: 1px solid rgb(var(--secondaryColorBright));
+  border: 1px solid rgb(var(--secondaryColorDark));
 }
 
-.button-mopo {
+.mopo {
   margin: 0;
   padding: 0;
 }

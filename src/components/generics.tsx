@@ -2,6 +2,8 @@ import React from "react";
 import Menubar from "../components/menubar";
 import Footer from "../components/footer";
 
+import '../styles/general/generics.css'
+
 interface GenericPageProps {
   useExpandableClass?: boolean;
   selected?: string;

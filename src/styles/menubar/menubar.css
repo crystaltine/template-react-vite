@@ -2,7 +2,7 @@
     --menubarHeight: min(80px, 20vh);
     --menubarFontSize: min(20px, 5vh);
     --menubarColor: 18, 18, 21;
-    --menubarPaddingX: min(120px, 10%);
+    --menubarPaddingX: calc((100vw - var(--genericPageWidth)) / 2);
 }
 
 .menubar-main {
