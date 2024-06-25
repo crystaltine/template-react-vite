@@ -1,2 +1,7 @@
 # crystaltine's React + Vite Template
-Basic starter styles and components for a React + Vite web project.
+Basic repo containing prebuilt custom styles and components for my React + Vite (Typescript) web projects
+since i often find myself making the same things over and over again.
+
+run `npm install` to install dependencies, then `npm run dev` to start a dev server.
+
+warning most of this code probably sucks
