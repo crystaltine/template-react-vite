@@ -1,6 +1,6 @@
 :root {
-    --menubarHeight: min(80px, 20vh);
-    --menubarFontSize: min(20px, 5vh);
+    --menubarHeight: min(60px, 15vh);
+    --menubarFontSize: min(16px, 4vh);
     --menubarColor: 18, 18, 21;
     --menubarPaddingX: calc((100vw - var(--genericPageWidth)) / 2);
 }

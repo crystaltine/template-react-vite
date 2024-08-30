@@ -173,6 +173,39 @@ a:hover {
   width: fit-content;
 }
 
+/* Prebuilt input element styles */
+.input-primary {
+  width: 100%;
+  font-family: var(--paragraphFont);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border-radius: var(--roundedSmall);
+  background-color: rgb(var(--backgroundColor2));
+  border: 2px solid transparent;
+  outline: 1px solid #fff2;
+  transition: box-shadow 0.3s ease, border 0.1s ease-in-out;
+}
+.input-primary::placeholder {
+  color: #fff6;
+}
+.input-primary:hover {
+  outline: 1px solid #fff4;
+}
+.input-primary:hover::placeholder {
+  color: #fff8;
+}
+.input-primary:focus {
+  box-shadow: 0 0 0 4px rgba(var(--primaryColorBright), 0.2);
+  border: 2px solid rgb(var(--primaryColorBright));
+  outline: 1px solid #fff4;
+}
+.input-primary:focus::placeholder {
+  color: #fff8;
+}
+
 .button-primary, .button-secondary, .button-danger {
   border-radius: var(--roundedSmall);
   font-weight: 600;
