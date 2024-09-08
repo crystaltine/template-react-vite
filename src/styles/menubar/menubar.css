@@ -1,6 +1,6 @@
 body {
     --menubarHeight: min(60px, 15vh);
-    --menubarFontSize: min(16px, 4vh);
+    --menubarFontSize: min(1rem, 4vh);
     --menubarPaddingX: calc((100vw - var(--genericPageWidth)) / 2);
 }
 .theme-dark {
@@ -23,7 +23,7 @@ body {
     left: 0;
     font-family: var(--displayFont);
     font-size: var(--menubarFontSize);
-    font-weight: 500;
+    font-weight: 600;
     width: 100%;
     z-index: 100;
 }
