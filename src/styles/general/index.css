@@ -20,13 +20,13 @@ body {
 
 /* Main dark theme colors - look in other files menubar.css for other colors */
 .theme-dark {
-  --backgroundColor0: 0, 0, 0;
-  --backgroundColor1: 4, 5, 6;
-  --backgroundColor2: 9, 10, 11;
-  --backgroundColor3: 16, 17, 19;
-  --backgroundColor4: 24, 26, 29;
-  --backgroundColor5: 33, 35, 39;
-  --backgroundColor6: 45, 47, 52;
+  --backgroundColor0: 9, 9, 10;
+  --backgroundColor1: 13, 13, 14;
+  --backgroundColor2: 18, 18, 20;
+  --backgroundColor3: 25, 25, 31;
+  --backgroundColor4: 33, 34, 39;
+  --backgroundColor5: 45, 47, 52;
+  --backgroundColor6: 58, 60, 66;
 
   --primaryColor0: 138, 127, 255;
   --primaryColor1: 113, 97, 255;

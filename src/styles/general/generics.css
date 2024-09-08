@@ -19,6 +19,7 @@
     flex-direction: column;
     background-color: rgb(var(--backgroundColor0));
 }
+
 .genpage-container {
     padding: var(--pagePaddingY) 0;
     width: var(--genericPageWidth);

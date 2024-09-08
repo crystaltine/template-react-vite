@@ -4,7 +4,7 @@ body {
     --menubarPaddingX: calc((100vw - var(--genericPageWidth)) / 2);
 }
 .theme-dark {
-    --menubarColor: var(--backgroundColor3);
+    --menubarColor: var(--backgroundColor2);
 }
 .theme-light {
     --menubarColor: var(--backgroundColor0);
