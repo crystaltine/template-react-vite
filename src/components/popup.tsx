@@ -35,12 +35,12 @@ export const Popup = (props: Partial<IPopupProps>) => {
   return (
     <div className='popup-backdrop'>
       <div className='popup-container' onMouseDown={() => props.clickBackdropToClose!==false && props.onClose?.()}>
-          <div 
-          onMouseDown={(e) => e.stopPropagation()}
-          className={`${props.extraClassString || ''} ${props.noIncludeBody? '' : 'popup-body'}`}
-          style={props.outerStyle}>
-            {props.children}
-          </div>
+        <div 
+        onMouseDown={(e) => e.stopPropagation()}
+        className={`${props.extraClassString || ''} ${props.noIncludeBody? '' : 'popup-body'}`}
+        style={props.outerStyle}>
+          {props.children}
+        </div>
       </div>
     </div>
   );

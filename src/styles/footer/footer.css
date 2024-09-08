@@ -1,7 +1,12 @@
-:root {
-    --footerColor: var(--backgroundColor1);
+.theme-dark {
+    --footerColor: var(--backgroundColor2);
     --footerTextColor: 225, 232, 235, 0.7;
-    --footerBorderColor: 192, 192, 192, 0.0; /* invis footer */
+    --footerBorderColor: transparent; /* invis footer */
+}
+.theme-light {
+    --footerColor: var(--backgroundColor2);
+    --footerTextColor: 0, 0, 0, 1;
+    --footerBorderColor: transparent; /* invis footer */
 }
 
 .footer-container {
@@ -27,7 +32,6 @@
     background-color: rgb(var(--footerColor));
     width: 100%;
     box-sizing: border-box;
-    box-shadow: 0 5px 20px 0 #0008;
 }
 
 .links-spacer {

@@ -11,13 +11,13 @@ const Homepage = () => {
     <GenericPagePadded selected='Homepage'>
 			<div className='homepage-main'>
 				<h1>
-					Homepage
+					(h1) Generic Homepage
 				</h1>
 				<h2>
-					this is using a GenericPagePadded component
+					(h2) Using a GenericPagePadded component
 				</h2>
 				<p>
-					GenericPagePadded automatically adds some aesthetic padding to the sides of the page
+					(p) GenericPagePadded automatically adds some aesthetic padding to the sides of the page
 				</p>
 				<a href='/usingGenericPage' className='link-invis'>
 					<button className='button-primary button-medium mr-5 mb-5'>
@@ -30,12 +30,12 @@ const Homepage = () => {
 					secondary button that opens a sample popup
 				</button>
 				<Popup open={popupOpen} onClose={() => setPopupOpen(false)}>
-					<h1 className='mopo'>
-						Sample Popup
-					</h1>
-					<h2 className='mopo'>
-						This is a sample popup, using the Popup component
-					</h2>
+					<h3 className='mopo'>
+						(h3) Sample Popup
+					</h3>
+					<h5 className='mopo'>
+						(h5) This is a sample popup, using the Popup component
+					</h5>
 					<p className='mopo'>
 						Important note: popup body div automatically adds 20px padding between children.
 						<br />

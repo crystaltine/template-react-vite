@@ -3,7 +3,6 @@ import Homepage from './pages/home';
 import UsingGenericPage from './pages/usingGenericPage';
 
 const Main = () => {
-
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />

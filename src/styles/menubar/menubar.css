@@ -1,8 +1,13 @@
-:root {
+body {
     --menubarHeight: min(60px, 15vh);
     --menubarFontSize: min(16px, 4vh);
-    --menubarColor: 18, 18, 21;
     --menubarPaddingX: calc((100vw - var(--genericPageWidth)) / 2);
+}
+.theme-dark {
+    --menubarColor: var(--backgroundColor3);
+}
+.theme-light {
+    --menubarColor: var(--backgroundColor0);
 }
 
 .menubar-main {
@@ -21,4 +26,18 @@
     font-weight: 500;
     width: 100%;
     z-index: 100;
+}
+
+.menubar-theme-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    padding: 0.2em;
+    cursor: pointer;
+}
+
+.menubar-theme-icon {
+    width: 1.5em;
+    height: 1.5em;
 }
