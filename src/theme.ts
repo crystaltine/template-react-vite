@@ -1,9 +1,27 @@
-type SiteTheme = 'light' | 'dark';
-export let currTheme: SiteTheme = 'light';
-document.body.classList.add(`theme-${currTheme}`);
+/* Theme handling stuff. Wrapped in class so it
+doesnt reset every time the page changes */
 
-export function toggleTheme() {
-  document.body.classList.remove(`theme-${currTheme}`);
-	currTheme = currTheme === 'light'? 'dark' : 'light';
-  document.body.classList.add(`theme-${currTheme}`);
+type SiteTheme = 'light' | 'dark';
+export class SiteThemeManager {
+  public static currTheme: SiteTheme;
+
+  static {
+
+    const storedTheme = localStorage.getItem('crystaltine-site-theme');
+    if (storedTheme) {
+      SiteThemeManager.currTheme = storedTheme as SiteTheme;
+    } else {
+      SiteThemeManager.currTheme = 'light';
+      localStorage.setItem('crystaltine-site-theme', 'light');
+    }
+
+    document.body.classList.add(`theme-${SiteThemeManager.currTheme}`);
+  }
+
+  public static toggleTheme() {
+    document.body.classList.remove(`theme-${SiteThemeManager.currTheme}`);
+    SiteThemeManager.currTheme = SiteThemeManager.currTheme === 'light'? 'dark' : 'light';
+    document.body.classList.add(`theme-${SiteThemeManager.currTheme}`);
+    localStorage.setItem('crystaltine-site-theme', SiteThemeManager.currTheme);
+  }
 }

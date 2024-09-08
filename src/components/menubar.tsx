@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/menubar/menubar.css'
 import lightThemeIcon from '../assets/theme-light.svg';
 import darkThemeIcon from '../assets/theme-dark.svg';
-import { currTheme, toggleTheme } from '../theme';
+import { SiteThemeManager } from '../theme';
 
 interface MenubarProps {
   selected?: string;
@@ -11,10 +11,10 @@ interface MenubarProps {
 const Menubar = (props: MenubarProps) => {
 
   // allows theme toggle button to change icons
-  const [_currTheme, setCurrTheme] = React.useState(currTheme);
+  const [_currTheme, setCurrTheme] = React.useState(SiteThemeManager.currTheme);
   const _toggleTheme = React.useCallback(() => {
-    toggleTheme();
-    setCurrTheme(currTheme);
+    SiteThemeManager.toggleTheme();
+    setCurrTheme(SiteThemeManager.currTheme);
   }, []);
 
   return (

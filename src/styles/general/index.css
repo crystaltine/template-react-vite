@@ -1,5 +1,4 @@
 /* Prebuilt/general css stuff for the entire project */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -75,8 +74,8 @@ body {
 /* For smooth transitioning between light-dark themes.
 This is a very low priority selector so it shouldnt
 interfere with other animated elements as long as they override. */
-* {
-  transition: background 0.3s ease, color 0.03s ease; 
+.theme-light *, .theme-dark * {
+  transition: background 0.3s ease; 
   /* ???: for some reason, color transitions take 10x longer, hence 0.03 instead of 0.3 */
 }
 
