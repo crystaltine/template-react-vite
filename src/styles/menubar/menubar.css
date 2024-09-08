@@ -5,9 +5,11 @@ body {
 }
 .theme-dark {
     --menubarColor: var(--backgroundColor2);
+    --menubarBorderBottom: unset;
 }
 .theme-light {
     --menubarColor: var(--backgroundColor0);
+    --menubarBorderBottom: 1px solid rgba(var(--secondaryColor0), 0.2);
 }
 
 .menubar-main {
@@ -26,6 +28,26 @@ body {
     font-weight: 600;
     width: 100%;
     z-index: 100;
+    border-bottom: var(--menubarBorderBottom)
+}
+
+.menubar-title-container {
+    max-width: 100%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+.menubar-logo-img {
+    display: inline;
+    vertical-align: middle;
+    height: 1.5em;
+    width: 1.5em;
+    margin: 0;
+    margin-right: 0.5em;
+    line-height: 0;
+}
+.menubar-title-text {
+    vertical-align: middle;
 }
 
 .menubar-theme-container {
@@ -36,7 +58,6 @@ body {
     padding: 0.2em;
     cursor: pointer;
 }
-
 .menubar-theme-icon {
     width: 1.5em;
     height: 1.5em;
