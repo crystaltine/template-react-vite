@@ -156,6 +156,13 @@ a:hover {
   background: rgb(var(--backgroundColor4));
 }
 
+.theme-light *::selection {
+  background-color: rgba(var(--primaryColor4), 0.25);
+}
+.theme-dark *::selection {
+  background-color: rgba(var(--primaryColor0), 0.5);
+}
+
 /* classes for quick debugging */
 .red {
   background-color: rgba(255, 20, 20, 0.4) !important;
