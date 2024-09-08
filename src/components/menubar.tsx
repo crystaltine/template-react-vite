@@ -1,9 +1,8 @@
-import React from 'react';
 import '../styles/menubar/menubar.css'
 import lightThemeIcon from '../assets/theme-light.svg';
 import darkThemeIcon from '../assets/theme-dark.svg';
 import logoImg from '../assets/logo7_128x_nobg.png';
-import { SiteThemeManager } from '../theme';
+import { useTheme } from '../themeHook';
 
 interface MenubarProps {
   selected?: string;
@@ -12,11 +11,7 @@ interface MenubarProps {
 const Menubar = (props: MenubarProps) => {
 
   // allows theme toggle button to change icons
-  const [_currTheme, setCurrTheme] = React.useState(SiteThemeManager.currTheme);
-  const _toggleTheme = React.useCallback(() => {
-    SiteThemeManager.toggleTheme();
-    setCurrTheme(SiteThemeManager.currTheme);
-  }, []);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className='menubar-main'>
@@ -26,8 +21,8 @@ const Menubar = (props: MenubarProps) => {
         <span className='menubar-title-text'>Menubar | Current Page: {props.selected}</span>
       </div>
       
-      <div className='menubar-theme-container' onClick={_toggleTheme}>
-        <img src={_currTheme === 'light'? darkThemeIcon : lightThemeIcon} alt="toggle theme" className='menubar-theme-icon' />
+      <div className='menubar-theme-container' onClick={toggleTheme}>
+        <img src={theme === 'light'? darkThemeIcon : lightThemeIcon} alt="toggle theme" className='menubar-theme-icon' />
       </div>
 
     </div>
