@@ -1,10 +1,10 @@
 .theme-dark {
-    --footerColor: var(--backgroundColor2);
+    --footerColor: var(--bg2);
     --footerTextColor: 225, 232, 235, 0.7;
     --footerBorderColor: transparent; /* invis footer */
 }
 .theme-light {
-    --footerColor: var(--backgroundColor2);
+    --footerColor: var(--bg2);
     --footerTextColor: 0, 0, 0, 1;
     --footerBorderColor: transparent; /* invis footer */
 }

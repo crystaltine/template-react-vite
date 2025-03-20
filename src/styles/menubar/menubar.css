@@ -4,12 +4,12 @@ body {
     --menubarPaddingX: calc((100vw - var(--genericPageWidth)) / 2);
 }
 .theme-dark {
-    --menubarColor: var(--backgroundColor2);
+    --menubarColor: var(--bg2);
     --menubarBorderBottom: unset;
 }
 .theme-light {
-    --menubarColor: var(--backgroundColor0);
-    --menubarBorderBottom: 1px solid rgba(var(--secondaryColor0), 0.2);
+    --menubarColor: var(--bg0);
+    --menubarBorderBottom: 1px solid rgba(var(--secondary0), 0.2);
 }
 
 .menubar-main {

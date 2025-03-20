@@ -12,63 +12,81 @@ body {
   --paragraphFont: "Figtree", "Inter", "Work Sans", "Open Sans", system-ui, sans-serif;
   --codeFont: "Roboto Mono", Consolas, monospace;
 
-  --roundedSmall: 5px;
-  --roundedMedium: min(2vmin, 8px);
-  --roundedLarge: 10px;
+  --rounded-xs: 6px;
+  --rounded-sm: 10px;
+  --rounded-m: 16px;
+
+  --spacing-xs: 0.6rem;
+  --spacing-sm: 0.75rem; /* equiv. to 3 in Tailwind */
+  --spacing-m: 1.25rem; /* equiv. to 5 in Tailwind */
 }
 
 /* Main dark theme colors - look in other files menubar.css for other colors */
 .theme-dark {
-  --backgroundColor0: 9, 9, 10;
-  --backgroundColor1: 13, 13, 14;
-  --backgroundColor2: 18, 18, 20;
-  --backgroundColor3: 25, 25, 31;
-  --backgroundColor4: 33, 34, 39;
-  --backgroundColor5: 45, 47, 52;
-  --backgroundColor6: 58, 60, 66;
+  --bg0: 9, 9, 10;
+  --bg1: 13, 13, 14;
+  --bg2: 18, 18, 20;
+  --bg3: 25, 25, 31;
+  --bg4: 33, 34, 39;
+  --bg5: 45, 47, 52;
+  --bg6: 58, 60, 66;
 
-  --primaryColor0: 138, 127, 255;
-  --primaryColor1: 113, 97, 255;
-  --primaryColor2: 94, 76, 246;
-  --primaryColor3: 76, 62, 189;
-  --primaryColor4: 50, 36, 153;
+  --primary0: 138, 127, 255;
+  --primary1: 113, 97, 255;
+  --primary2: 94, 76, 246;
+  --primary3: 76, 62, 189;
+  --primary4: 50, 36, 153;
 
-  --secondaryColor0: 176, 177, 192;
-  --secondaryColor1: 131, 135, 145;
+  --secondary0: 176, 177, 192;
+  --secondary1: 131, 135, 145;
 
-  --textColor: 255, 255, 255;
+  --important0: 255, 200, 73;
+
+  --danger0: 245, 93, 93;
+
+  --fg-active: 210, 210, 215;
+  --fg-midactive: 170, 170, 175;
+  --fg-inactive: 140, 140, 145;
+
   --linkColor: 191, 99, 244;
 }
 
 /* Main light theme colors - look in other files menubar.css for other colors */
 .theme-light {
-  --backgroundColor0: 255, 255, 255;
-  --backgroundColor1: 255, 255, 255;
-  --backgroundColor2: 250, 250, 251;
-  --backgroundColor3: 241, 241, 242;
-  --backgroundColor4: 233, 233, 234;
-  --backgroundColor5: 220, 220, 221;
-  --backgroundColor6: 206, 206, 207;
+  --bg0: 255, 255, 255;
+  --bg1: 255, 255, 255;
+  --bg2: 250, 250, 251;
+  --bg3: 241, 241, 242;
+  --bg4: 233, 233, 234;
+  --bg5: 220, 220, 221;
+  --bg6: 206, 206, 207;
 
-  --primaryColor0: 138, 127, 255;
-  --primaryColor1: 113, 97, 255;
-  --primaryColor2: 94, 76, 246;
-  --primaryColor3: 76, 62, 189;
-  --primaryColor4: 50, 36, 153;
+  --primary0: 138, 127, 255;
+  --primary1: 113, 97, 255;
+  --primary2: 94, 76, 246;
+  --primary3: 76, 62, 189;
+  --primary4: 50, 36, 153;
 
-  --secondaryColor0: 126, 127, 132;
-  --secondaryColor1: 143, 145, 153;
+  --secondary0: 126, 127, 132;
+  --secondary1: 143, 145, 153;
+
+  --important0: 225, 185, 53;
+
+  --danger0: 235, 53, 53;
+
+  --fg-active: 30, 30, 35;
+  --fg-midactive: 70, 70, 75;
+  --fg-inactive: 110, 110, 115;
 
   --linkColor: 191, 99, 244;
-  --textColor: 0, 0, 0;
 }
 
 body {
   font-family: var(--paragraphFont);
   font-size: 16px;
   margin: 0;
-  background-color: rgb(var(--backgroundColor0));
-  color: rgb(var(--textColor));
+  background-color: rgb(var(--bg0));
+  color: rgb(var(--fg-active));
 }
 
 /* For smooth transitioning between light-dark themes.
@@ -117,17 +135,17 @@ h6 {
 
 hr {
   width: 100%;
-  border: 1px solid rgb(var(--textColor), 0.2);
+  border: 1px solid rgb(var(--fg-active), 0.2);
   margin: 0;
 }
 
 code {
   font-family: var(--codeFont);
   font-size: 1em;
-  background-color: rgb(var(--backgroundColor3));
+  background-color: rgb(var(--bg3));
   padding: 0.1em 0.2em;
-  border-radius: var(--roundedSmall);
-  color: rgb(var(--textColor));
+  border-radius: var(--rounded-xs);
+  color: rgb(var(--fg-active));
 }
 
 a {
@@ -144,23 +162,23 @@ a:hover {
   height: min(12px, 1vh);
 }
 *::-webkit-scrollbar-track {
-  background: rgb(var(--backgroundColor4));
+  background: rgb(var(--bg4));
 }
 *::-webkit-scrollbar-thumb {
-  background: rgb(var(--backgroundColor6));
+  background: rgb(var(--bg6));
 }
 *::-webkit-scrollbar-thumb:hover {
-  background: rgb(var(--backgroundColor5));
+  background: rgb(var(--bg5));
 }
 *::-webkit-scrollbar-corner {
-  background: rgb(var(--backgroundColor4));
+  background: rgb(var(--bg4));
 }
 
 .theme-light *::selection {
-  background-color: rgba(var(--primaryColor4), 0.25);
+  background-color: rgba(var(--primary4), 0.25);
 }
 .theme-dark *::selection {
-  background-color: rgba(var(--primaryColor0), 0.5);
+  background-color: rgba(var(--primary0), 0.5);
 }
 
 /* classes for quick debugging */
@@ -211,38 +229,38 @@ a:hover {
 .input-primary {
   width: 100%;
   font-family: var(--paragraphFont);
-  color: rgb(var(--textColor));
+  color: rgb(var(--fg-active));
   font-size: 0.9em;
   font-weight: 400;
   padding: 8px 10px;
   box-sizing: border-box;
-  border-radius: var(--roundedMedium);
+  border-radius: var(--rounded-sm);
   border: 2px solid transparent;
-  outline: 1px solid rgba(var(--secondaryColor1), 0.5);
+  outline: 1px solid rgba(var(--secondary1), 0.5);
   transition: background 0.3s ease, box-shadow 0.3s ease, outline-color 0.15s ease;
 }
 .theme-dark .input-primary {
-  background-color: rgb(var(--backgroundColor3));
+  background-color: rgb(var(--bg3));
 }
 .theme-light .input-primary {
-  background-color: rgb(var(--backgroundColor1));
+  background-color: rgb(var(--bg1));
 }
 .input-primary::placeholder {
-  color: rgba(var(--textColor), 0.5);
+  color: rgba(var(--fg-active), 0.5);
 }
 .input-primary:hover {
-  outline: 1px solid rgba(var(--secondaryColor1), 0.9);
+  outline: 1px solid rgba(var(--secondary1), 0.9);
 }
 .input-primary:hover::placeholder {
-  color: rgba(var(--textColor), 0.7);
+  color: rgba(var(--fg-active), 0.7);
 }
 .input-primary:focus {
-  box-shadow: 0 0 0 5px rgba(var(--primaryColor1), 0.3);
-  border: 2px solid rgb(var(--primaryColor1));
-  outline: 1px solid rgb(var(--primaryColor1));
+  box-shadow: 0 0 0 5px rgba(var(--primary1), 0.3);
+  border: 2px solid rgb(var(--primary1));
+  outline: 1px solid rgb(var(--primary1));
 }
 .input-primary:focus::placeholder {
-  color: rgba(var(--textColor), 0.7);
+  color: rgba(var(--fg-active), 0.7);
 }
 
 button {
@@ -250,7 +268,7 @@ button {
   max-width: fit-content; /* by default buttons dont fill, however this can be overridden */
 }
 .button-primary, .button-secondary, .button-danger {
-  border-radius: var(--roundedMedium);
+  border-radius: var(--rounded-sm);
   font-weight: 500;
   font-family: var(--displayFont);
   border: none;
@@ -281,34 +299,34 @@ button {
   color: white;
 }
 .button-secondary[disabled] {
-  outline: 1px solid rgba(var(--textColor), 0.2);
-  color: rgb(var(--textColor));
+  outline: 1px solid rgba(var(--fg-active), 0.2);
+  color: rgb(var(--fg-active));
   background-color: transparent;
 }
 
 .button-primary {
   color: white;
-  background-color: rgb(var(--primaryColor2));
+  background-color: rgb(var(--primary2));
   box-shadow: 0px 1px 4px 1px #0003;
 }
 .button-primary:hover {
-  background-color: rgb(var(--primaryColor1));
+  background-color: rgb(var(--primary1));
   box-shadow: 0px 2px 5px 1px #0004;
 }
 
 .button-secondary {
-  background-color: rgba(var(--backgroundColor2), 0.5);
-  color: rgb(var(--textColor));
-  border: 1px solid rgba(var(--secondaryColor1), 0.5);
+  background-color: rgba(var(--bg2), 0.5);
+  color: rgb(var(--fg-active));
+  border: 1px solid rgba(var(--secondary1), 0.5);
   outline: none;
 }
 .theme-dark .button-secondary:hover {
-  background-color: rgba(var(--backgroundColor4), 0.9);
-  border: 1px solid rgb(var(--secondaryColor1), 0.9);
+  background-color: rgba(var(--bg4), 0.9);
+  border: 1px solid rgb(var(--secondary1), 0.9);
 }
 .theme-light .button-secondary:hover {
-  background-color: rgba(var(--backgroundColor3), 0.9);
-  border: 1px solid rgb(var(--secondaryColor1), 0.9);
+  background-color: rgba(var(--bg3), 0.9);
+  border: 1px solid rgb(var(--secondary1), 0.9);
 }
 
 .mopo {
