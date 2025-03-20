@@ -234,8 +234,8 @@ a:hover {
   font-weight: 400;
   padding: 8px 10px;
   box-sizing: border-box;
-  border-radius: var(--rounded-sm);
-  border: 2px solid transparent;
+  border-radius: var(--rounded-xs);
+  border: 1px solid transparent;
   outline: 1px solid rgba(var(--secondary1), 0.5);
   transition: background 0.3s ease, box-shadow 0.3s ease, outline-color 0.15s ease;
 }
@@ -256,7 +256,7 @@ a:hover {
 }
 .input-primary:focus {
   box-shadow: 0 0 0 5px rgba(var(--primary1), 0.3);
-  border: 2px solid rgb(var(--primary1));
+  border: 1px solid rgb(var(--primary1));
   outline: 1px solid rgb(var(--primary1));
 }
 .input-primary:focus::placeholder {
@@ -268,7 +268,7 @@ button {
   max-width: fit-content; /* by default buttons dont fill, however this can be overridden */
 }
 .button-primary, .button-secondary, .button-danger {
-  border-radius: var(--rounded-sm);
+  border-radius: var(--rounded-xs);
   font-weight: 500;
   font-family: var(--displayFont);
   border: none;
